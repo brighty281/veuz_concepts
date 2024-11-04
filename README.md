@@ -1,6 +1,3 @@
-Here's a polished version of your project instructions, formatted as a README file:
-
----
 
 # Employee management app
 
