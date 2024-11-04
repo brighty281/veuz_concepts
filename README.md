@@ -18,7 +18,7 @@ Follow the steps below to set up and run the project on your local machine.
 1. **Clone the Repository**  
    Clone the project repository to your local machine using the following command:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/brighty281/veuz_concepts-employee_mgmt.git
    ```
 
 2. **Set Up the Backend (Django)**
