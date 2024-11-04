@@ -26,7 +26,6 @@ Follow the steps below to set up and run the project on your local machine.
    - **Create a Virtual Environment**  
      Navigate to the backend directory and create a virtual environment:
      ```bash
-     cd backend
      python -m venv venv
      ```
 
@@ -42,9 +41,10 @@ Follow the steps below to set up and run the project on your local machine.
        ```
 
    - **Install Dependencies**
-     Navigate to backend folder cd backend
+     Navigate to backend project folder cd backend
      Install the required dependencies by running:
      ```bash
+     cd backend
      pip install -r requirements.txt
      ```
 
