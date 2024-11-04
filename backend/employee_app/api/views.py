@@ -20,13 +20,7 @@ from rest_framework.generics import UpdateAPIView
 from .serializers import UserUpdateSerializer
 from rest_framework import generics
 
-class getAccountsRoutes(APIView):
-     def get(self, request, format=None):
-        routes = [
-        'api/accounts/login',
-        'api/accounts/register',
-                    ]
-        return Response(routes)
+
 
 class RegisterView(APIView):
     def post(self,request):
@@ -115,6 +109,7 @@ class UserDetailsUpdate(APIView):
         
         
 ###################### ADMIN SIDE ####################
+
 class AdminLoginView(APIView):
     def post(self,request):
         try:
@@ -130,8 +125,6 @@ class AdminLoginView(APIView):
         if User.objects.filter(email=email,is_superuser=False).exists():
             raise AuthenticationFailed('please log in employee view')
         
-        if not User.objects.filter(email=email,is_active=True).exists():
-            raise AuthenticationFailed('You are blocked by admin ! Please contact admin')
         
         user = authenticate(username=email,password=password)
         if user is None:
@@ -151,7 +144,6 @@ class AdminLoginView(APIView):
 
 
 class AdminUserListCreateView(ListCreateAPIView):
-    print("++++")
     queryset = User.objects.all().order_by('-date_joined')  
     serializer_class = AdminUserSerializer
 
